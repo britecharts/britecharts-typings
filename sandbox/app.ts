@@ -6,12 +6,13 @@ export default (window: Window) => {
 
   window.document.body.innerHTML = buildTemplate(chartContainerId);
 
-  const bar = britecharts.bar();
+  const barChart = britecharts.bar();
 
-  bar
+  barChart
     .width(400)
     .height(400)
     .betweenBarsPadding(300)
     .isAnimated(true)
-    .labelsNumberFormat('.0%');
+    .labelsNumberFormat('.0%')
+    .orderingFunction((a, b) => a.value - b.value);
 };
