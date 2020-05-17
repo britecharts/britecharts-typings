@@ -6,3 +6,8 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
+
+.app-container {
+  height: 100%;
+  width: 100%;
+}

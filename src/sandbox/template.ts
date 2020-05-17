@@ -1,6 +1,8 @@
 export const buildTemplate = (containerId: string): string => `
 <div id="app">
-<h1>Hello Message</h1>
-<div id="${containerId}"></div>
+    <h1>Britecharts TypeScript Sandbox</h1>
+    <div class="app-container">
+        <section id="${containerId}"></section>
+    </div>
 </div>
 `;
