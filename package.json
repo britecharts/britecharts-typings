@@ -11,6 +11,7 @@
     "start:dev": "webpack-dev-server"
   },
   "devDependencies": {
+    "@types/d3-selection": "^1.4.1",
     "html-webpack-plugin": "^4.3.0",
     "ts-loader": "^7.0.4",
     "typescript": "^3.9.2",
@@ -19,6 +20,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "britecharts": "^2.15.1"
+    "britecharts": "^2.15.1",
+    "d3-selection": "^1.4.1"
   }
 }

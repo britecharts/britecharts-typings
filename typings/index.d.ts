@@ -1,12 +1,14 @@
 declare module 'britecharts' {
-  export interface ChartModule<T> {
-    height(height?: number): T & ChartModule<T>;
-    isAnimated(isAnimated?: boolean): T & ChartModule<T>;
-    loadingState(markup?: string): T & ChartModule<T>;
-    width(width?: number): T & ChartModule<T>;
+  import { Selection } from 'd3-selection';
+
+  export interface ChartBaseAPI<T> {
+    height(height?: number): T & ChartBaseAPI<T>;
+    isAnimated(isAnimated?: boolean): T & ChartBaseAPI<T>;
+    loadingState(markup?: string): T & ChartBaseAPI<T>;
+    width(width?: number): T & ChartBaseAPI<T>;
   }
 
-  export enum BarChartKeys {
+  enum BarChartKeys {
     Value = 'value',
     Name = 'name',
   }
@@ -16,15 +18,20 @@ declare module 'britecharts' {
     [BarChartKeys.Name]: string;
   };
 
-  export interface BarChartModule extends ChartModule<BarChartModule> {
-    betweenBarsPadding(padding?: number): BarChartModule;
-    chartGradient(gradient?: [string, string]): BarChartModule;
-    labelsNumberFormat(format?: string): BarChartModule;
-    labelsSize(size?: number): BarChartModule;
+  export interface BarChartAPI extends ChartBaseAPI<BarChartAPI> {
+    betweenBarsPadding(padding?: number): BarChartAPI;
+    chartGradient(gradient?: [string, string]): BarChartAPI;
+    labelsNumberFormat(format?: string): BarChartAPI;
+    labelsSize(size?: number): BarChartAPI;
     orderingFunction(
       orderingFunc: (a: BarChartDataShape, b: BarChartDataShape) => void
-    ): BarChartModule;
+    ): BarChartAPI;
   }
 
-  function bar(): BarChartModule;
+  type BarModuleType = (
+    _selection: Selection<HTMLElement, BarChartDataShape[], HTMLElement, any>,
+    _data: BarChartDataShape[]
+  ) => void;
+
+  function bar(): BarModuleType & BarChartAPI;
 }
