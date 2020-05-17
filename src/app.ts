@@ -1,9 +1,12 @@
-const buildTemplate = (): string => `
-<div id="app">
-<h1>Hello Message</h1>
-</div>
-`;
+import * as britecharts from "britecharts";
+import { buildTemplate } from "./template";
 
 export default (window: Window) => {
-  window.document.body.innerHTML = buildTemplate();
+  const chartContainerId = "chartArea";
+
+  window.document.body.innerHTML = buildTemplate(chartContainerId);
+
+  const bar = britecharts.bar();
+
+  console.log(bar.height(100).width(300));
 };
