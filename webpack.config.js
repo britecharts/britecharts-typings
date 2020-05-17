@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './sandbox/index.ts',
+  entry: './src/sandbox/index.ts',
   mode: 'development',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
