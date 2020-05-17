@@ -1,0 +1,21 @@
+{
+  "name": "webpack-typescript-britecharts-setup",
+  "version": "1.0.0",
+  "description": "Setup for typescript and britecharts, testing for @typed repo.",
+  "private": true,
+  "repository": "https://github.com/DalerAsrorov/webpack-typescript-britecharts-setup.git",
+  "author": "DalerAsrorov <asrorids@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "start:dev": "webpack-dev-server"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^4.3.0",
+    "ts-loader": "^7.0.4",
+    "typescript": "^3.9.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
