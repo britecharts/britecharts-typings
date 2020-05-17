@@ -1,8 +1,7 @@
+import * as barChart from './charts/bar-chart';
+
 declare module 'britecharts' {
-  import * as barChart from 'charts/bar-chart';
-
-  export * from 'charts/bar-chart';
-
+  export * from './charts/bar-chart';
   // Britecharts module contents:
   // import * as britecharts from 'britecharts';
   // britecharts.bar()
