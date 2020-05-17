@@ -8,6 +8,7 @@ declare module 'britecharts' {
   export interface BarChartModule extends ChartModule<BarChartModule> {
     betweenBarsPadding(padding?: number): BarChartModule;
     labelsNumberFormat(format?: string): BarChartModule;
+    chartGradient(gradient?: [string, string]): BarChartModule;
   }
 
   function bar(): BarChartModule;
