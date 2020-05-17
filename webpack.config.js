@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './sandbox/index.ts',
+  entry: './src/sandbox/index.ts',
   mode: 'development',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
@@ -15,6 +15,10 @@ module.exports = {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
