@@ -15,10 +15,27 @@ export type DonutChartDataShape = {
   [DonutChartKeys.Percentage]: number
 }
 
+export interface DonutEmptyDataConfig {
+  emptySliceColor: string
+  showEmptySlice: boolean
+}
+
 export interface DonutChartAPI extends ChartBaseAPI<DonutChartModule> {
   centeredTextFunction(
     centeredTextFunc: (a: DonutChartDataShape) => void
   ): DonutChartModule
+  emptyDataConfig(config?: DonutEmptyDataConfig): DonutChartModule
+  externalRadius(radius?: number): DonutChartModule
+  hasFixedHighlightedSlice(hasFixed?: boolean): DonutChartModule
+  hasHoverAnimation(hasHoverAnimation?: boolean): DonutChartModule
+  hasLastHoverSliceHighlighted(hasSliceHighlight?: boolean): DonutChartModule
+  highlightSliceById(id: DonutChartDataShape['id']): DonutChartModule
+  internalRadius(radius: number): DonutChartModule
+  orderingFunction(
+    orderingFunc: (a: DonutChartDataShape, b: DonutChartDataShape) => void
+  ): DonutChartModule
+  percentageFormat(format: string): DonutChartModule
+  radiusHoverOffset(offset: number): DonutChartModule
 }
 
 export type DonutChartModule = ChartModuleSelection<DonutChartDataShape[]> &
