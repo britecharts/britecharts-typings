@@ -5,7 +5,8 @@
     "target": "es5",
     "baseUrl": "src",
     "paths": {
-      "@charts/*": ["./typings/charts/*"]
+      "@charts/*": ["./typings/charts/*"],
+      "@helpers/*": ["./typings/helpers/*"]
     },
     "sourceMap": true,
     "noImplicitAny": true,
