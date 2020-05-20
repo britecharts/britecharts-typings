@@ -1,4 +1,4 @@
-import { BarChartDataShape } from 'britecharts';
+import { BarChartDataShape } from '@charts/bar-chart';
 
 export const SAMPLE_BAR_DATA: BarChartDataShape[] = [
   {

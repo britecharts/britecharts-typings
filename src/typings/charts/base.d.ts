@@ -1,4 +1,4 @@
-import { ChartMarginParams } from './margin';
+import { ChartMarginParams } from '@charts/margin';
 
 export interface ChartBaseAPI<T> {
   colorSchema(schema: any): T & ChartBaseAPI<T>;

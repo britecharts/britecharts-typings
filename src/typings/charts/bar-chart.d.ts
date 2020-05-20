@@ -1,7 +1,7 @@
-import { Selection } from 'd3-selection'
-import { ChartBaseAPI } from './base'
+import { ChartBaseAPI } from '@charts/base'
+import { ChartModuleSelection } from '@charts/selection'
 
-enum BarChartKeys {
+export enum BarChartKeys {
   Value = 'value',
   Name = 'name'
 }
@@ -10,11 +10,6 @@ export type BarChartDataShape = {
   [BarChartKeys.Value]: number
   [BarChartKeys.Name]: string
 }
-
-type BarChartModuleSelection = (
-  _selection: Selection<Element, BarChartDataShape[], Element | null, any>,
-  _data: BarChartDataShape[]
-) => void
 
 export interface BarChartAPI extends ChartBaseAPI<BarChartModule> {
   betweenBarsPadding(padding?: number): BarChartModule
@@ -30,4 +25,11 @@ export interface BarChartAPI extends ChartBaseAPI<BarChartModule> {
   ): BarChartModule
 }
 
-export type BarChartModule = BarChartModuleSelection & BarChartAPI
+export type BarChartModule = ChartModuleSelection<BarChartDataShape[]> &
+  BarChartAPI
+
+/**
+ * import {bar} from 'britecharts;
+ * bar().width(100).height(100)
+ */
+export function bar (): BarChartModule
