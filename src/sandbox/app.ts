@@ -1,6 +1,8 @@
-import { bar, colors } from 'britecharts'
 import { select } from 'd3-selection'
 import { SAMPLE_BAR_DATA } from '../data/bar-sample'
+import { SAMPLE_DONUT_DATA } from '../data/donut-sample'
+import { constructChart as constructBarChart } from './bar'
+import { constructChart as constructDonutChart } from './donut'
 import { buildTemplate } from './template'
 
 export default (window: Window) => {
@@ -10,21 +12,7 @@ export default (window: Window) => {
 
   const containerNode = document.querySelector(`#${chartContainerId}`)
   const container = select(containerNode)
-  const barChart = bar()
 
-  barChart
-    .margin({
-      left: 120,
-      right: 20,
-      top: 20,
-      bottom: 40
-    })
-    .isHorizontal(true)
-    .hasPercentage(true)
-    .colorSchema(colors.colorSchemas.britecharts)
-    .percentageAxisToMaxRatio(1.3)
-    .width(containerNode.clientWidth)
-    .height(500)
-
-  container.datum(SAMPLE_BAR_DATA).call(barChart)
+  container.datum(SAMPLE_BAR_DATA).call(constructBarChart(containerNode))
+  container.datum(SAMPLE_DONUT_DATA).call(constructDonutChart(containerNode))
 }
