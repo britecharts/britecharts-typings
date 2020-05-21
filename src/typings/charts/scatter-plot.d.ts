@@ -16,7 +16,7 @@ export type ScatterPlotDataShape = {
 
 export type ScatterPlotBaseAPI = Omit<
   ChartBaseAPI<ScatterPlotModule>,
-  'locale' | 'isAnimated' | 'loadingState'
+  'locale' | 'loadingState'
 >;
 
 export interface ScatterPlotAPI extends ScatterPlotBaseAPI {
