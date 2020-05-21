@@ -1,7 +1,9 @@
-import { donut, DonutChartModule } from 'britecharts';
+import { stackedArea, StackedAreaChartModule } from 'britecharts';
 
-export const constructChart = (containerNode: Element): DonutChartModule => {
-  const donutChart = donut();
+export const constructChart = (
+  containerNode: Element
+): StackedAreaChartModule => {
+  const donutChart = stackedArea();
 
   donutChart
     .margin({

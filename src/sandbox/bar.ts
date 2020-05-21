@@ -1,24 +1,24 @@
-import { bar, colors, BarChartModule } from 'britecharts'
+import { bar, colors, BarChartModule } from 'britecharts';
 
 export const constructChart = (containerNode: Element): BarChartModule => {
-  const barChart = bar()
+  const barChart = bar();
 
   barChart
     .margin({
       left: 120,
       right: 20,
       top: 20,
-      bottom: 40
+      bottom: 40,
     })
     .hasSingleBarHighlight(false)
-    .highlightBarFunction(bar => bar.attr('fill', 'cyan'))
+    .highlightBarFunction((bar) => bar.attr('fill', 'cyan'))
     .isHorizontal(true)
     .hasPercentage(true)
     .colorSchema(colors.colorSchemas.britecharts)
     .percentageAxisToMaxRatio(1.3)
     .width(containerNode.clientWidth)
     .orderingFunction((a, b) => b.value - a.value)
-    .height(500)
+    .height(500);
 
-  return barChart
-}
+  return barChart;
+};
