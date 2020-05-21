@@ -1,16 +1,6 @@
-import { ChartMarginParams } from '@charts/margin';
+import { LocalObject } from '@common/local';
 import { ColorsSchemasType } from '@helpers/colors';
-
-export type LocalObject = {
-  decimal?: string;
-  thousands?: string;
-  grouping?: number[];
-  currency?: string[];
-  numerals?: string[];
-  percent?: string;
-  minus?: string;
-  nan?: string;
-};
+import { ChartMarginParams } from '@common/margin';
 
 export interface ChartBaseAPI<T> {
   colorSchema(schema: ColorsSchemasType): T & ChartBaseAPI<T>;

@@ -1,5 +1,5 @@
-import { ChartBaseAPI } from '@charts/base';
-import { ChartModuleSelection } from '@charts/selection';
+import { ChartBaseAPI } from '@common/base';
+import { ChartModuleSelection } from '@common/selection';
 import { AxisTimeCombination } from '@helpers/constants';
 
 export enum StackedAreaChartKeys {
