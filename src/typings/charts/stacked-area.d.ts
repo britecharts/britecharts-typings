@@ -1,5 +1,6 @@
 import { ChartBaseAPI } from '@charts/base';
 import { ChartModuleSelection } from '@charts/selection';
+import { AxisTimeCombination } from '@helpers/constants';
 
 export enum StackedAreaChartKeys {
   Date = 'date',
@@ -23,6 +24,9 @@ export interface StackedAreaEmptyDataConfig {
 
 export interface StackedAreaChartAPI
   extends ChartBaseAPI<StackedAreaChartModule> {
+  axisTimeCombinations: {
+    [key in keyof typeof AxisTimeCombination]: AxisTimeCombination | string;
+  };
   areaCurve(curveType?: string): StackedAreaChartModule;
   aspectRatio(ratio?: number): StackedAreaChartModule;
   areaOpacity(opacity?: number): StackedAreaChartModule;
@@ -50,7 +54,9 @@ export type StackedAreaChartModule = ChartModuleSelection<
   StackedAreaChartAPI;
 
 /**
- * import {bar} from 'britecharts;
- * bar().width(100).height(100)
+ * import {stackedArea} from 'britecharts;
+ * const areaChart = stackedArea();
+ * areaChart().width(100).height(100);
+ * areaChart.xAxisFormat(areaChart.axisTimeCombinations.HOUR_DAY)
  */
 export function stackedArea(): StackedAreaChartModule;
