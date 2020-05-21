@@ -1,4 +1,5 @@
 import { ChartBaseAPI } from '@common/base';
+import { GridTypes } from '@common/grid';
 import { ChartModuleSelection } from '@common/selection';
 import { AxisTimeCombination } from '@helpers/constants';
 
@@ -7,8 +8,6 @@ export enum StackedAreaChartKeys {
   Name = 'name',
   Value = 'value',
 }
-
-export type GridTypes = 'vertical' | 'horizontal' | 'full';
 
 export type StackedAreaChartDataShape = {
   [StackedAreaChartKeys.Date]: string;

@@ -1,4 +1,5 @@
 import { ChartBaseAPI } from '@common/base';
+import { GridTypes } from '@common/grid';
 import { ChartModuleSelection } from '@common/selection';
 
 export enum ScatterPlotKeys {
@@ -21,7 +22,7 @@ export type ScatterPlotBaseAPI = Omit<
 export interface ScatterPlotAPI extends ScatterPlotBaseAPI {
   aspectRatio(ratio?: number): ScatterPlotModule;
   circleOpacity(opacity?: number): ScatterPlotModule;
-  grid(opacity?: number): ScatterPlotModule;
+  grid(opacity?: GridTypes): ScatterPlotModule;
   hasCrossHairs(hasCrossHairs?: boolean): ScatterPlotModule;
   hasHollowCircles(hasHollowCircles?: boolean): ScatterPlotModule;
   hasTrendline(hasTrendline?: boolean): ScatterPlotModule;
