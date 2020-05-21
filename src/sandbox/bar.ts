@@ -10,6 +10,8 @@ export const constructChart = (containerNode: Element): BarChartModule => {
       top: 20,
       bottom: 40
     })
+    .hasSingleBarHighlight(false)
+    .highlightBarFunction(bar => bar.attr('fill', 'cyan'))
     .isHorizontal(true)
     .hasPercentage(true)
     .colorSchema(colors.colorSchemas.britecharts)

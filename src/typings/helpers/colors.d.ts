@@ -8,28 +8,32 @@ export enum ColorSchema {
   yellow,
   pink,
   purple,
-  red,
+  red
 }
 
 export type ColorsSchemaHumanType = {
-  [key in keyof typeof ColorSchema]: string;
-};
+  [key in keyof typeof ColorSchema]: string
+}
+
+export type ColorsSchemasType = string[]
 
 export type ColorSchemas = {
-  [key in keyof typeof ColorSchema]: string[];
-};
+  [key in keyof typeof ColorSchema]: ColorsSchemasType
+}
 
 export enum ColorGradient {
   greenBlue,
   orangePink,
-  bluePurple,
+  bluePurple
 }
 
-export type ColorGradients = { [key in keyof typeof ColorGradient]: string[] };
+export type ColorGradients = {
+  [key in keyof typeof ColorGradient]: ColorsSchemasType
+}
 
 export type ColorGradientsHuman = {
-  [key in keyof typeof ColorGradient]: string;
-};
+  [key in keyof typeof ColorGradient]: string
+}
 
 export enum SingleColor {
   aloeGreen,
@@ -38,20 +42,22 @@ export enum SingleColor {
   yellowColor,
   orangeColor,
   pinkColor,
-  purpleColor,
+  purpleColor
 }
 
-export type SingleColors = { [key in keyof typeof SingleColor]: string[] };
+export type SingleColors = {
+  [key in keyof typeof SingleColor]: ColorsSchemasType
+}
 
 export type SingleColorsHuman = {
-  [key in keyof typeof SingleColor]: string;
-};
+  [key in keyof typeof SingleColor]: string
+}
 
 export const colors: {
-  colorSchemas: ColorSchemas;
-  colorSchemasHuman: ColorsSchemaHumanType;
-  colorGradients: ColorGradients;
-  colorGradientsHuman: ColorGradientsHuman;
-  singleColors: SingleColors;
-  singleColorsHuman: SingleColorsHuman;
-};
+  colorSchemas: ColorSchemas
+  colorSchemasHuman: ColorsSchemaHumanType
+  colorGradients: ColorGradients
+  colorGradientsHuman: ColorGradientsHuman
+  singleColors: SingleColors
+  singleColorsHuman: SingleColorsHuman
+}
