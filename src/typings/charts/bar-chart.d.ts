@@ -36,6 +36,15 @@ export interface BarChartAPI extends ChartBaseAPI<BarChartModule> {
   orderingFunction(
     orderingFunc: (a: BarChartDataShape, b: BarChartDataShape) => void
   ): BarChartModule
+  shouldReverseColorList(shouldReverse?: boolean): BarChartModule
+  valueLabel(valueLabel?: string): BarChartModule
+  xAxisLabel(xAxisLabel?: string): BarChartModule
+  xAxisLabelOffset(offset?: number): BarChartModule
+  xTicks(ticks?: number): BarChartModule
+  yAxisLabel(yAxisLabel?: string): BarChartModule
+  yAxisLabelOffset(yAxisLabelOffset?: number): BarChartModule
+  yAxisPaddingBetweenChart(yAxisPadding?: number): BarChartModule
+  yTicks(ticks?: number): BarChartModule
 }
 
 export type BarChartModule = ChartModuleSelection<BarChartDataShape[]> &
