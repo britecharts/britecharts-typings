@@ -1,5 +1,5 @@
-import { ChartBaseAPI } from '@charts/base';
-import { ChartModuleSelection } from '@charts/selection';
+import { ChartBaseAPI } from '@common/base';
+import { ChartModuleSelection } from '@common/selection';
 import { BaseType, Selection } from 'd3-selection';
 
 export enum BarChartKeys {

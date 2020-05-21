@@ -6,6 +6,7 @@
     "baseUrl": "src",
     "paths": {
       "@charts/*": ["./typings/charts/*"],
+      "@common/*": ["./typings/common/*"],
       "@helpers/*": ["./typings/helpers/*"]
     },
     "sourceMap": true,
