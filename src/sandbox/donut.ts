@@ -1,18 +1,18 @@
-import { donut, DonutChartModule } from 'britecharts'
+import { donut, DonutChartModule } from 'britecharts';
 
 export const constructChart = (containerNode: Element): DonutChartModule => {
-  const donutChart = donut()
+  const donutChart = donut();
 
   donutChart
     .margin({
       left: 120,
       right: 20,
       top: 20,
-      bottom: 40
+      bottom: 40,
     })
     .width(containerNode.clientWidth)
     .height(500)
-    .centeredTextFunction(d => `${d.quantity} units`)
+    .centeredTextFunction((d) => `${d.quantity} units`);
 
-  return donutChart
-}
+  return donutChart;
+};
