@@ -1,5 +1,6 @@
 import { ChartBaseAPI } from '@charts/base'
 import { ChartModuleSelection } from '@charts/selection'
+import { BaseType, Selection } from 'd3-selection'
 
 export enum BarChartKeys {
   Value = 'value',
@@ -11,12 +12,24 @@ export type BarChartDataShape = {
   [BarChartKeys.Name]: string
 }
 
+export type BarSelection = Selection<
+  BaseType,
+  BarChartDataShape,
+  HTMLElement,
+  any
+>
+
 export interface BarChartAPI extends ChartBaseAPI<BarChartModule> {
   betweenBarsPadding(padding?: number): BarChartModule
   chartGradient(gradient?: [string, string]): BarChartModule
   enableLabels(shouldEnable?: boolean): BarChartModule
   hasPercentage(hasPercentage?: boolean): BarChartModule
+  hasSingleBarHighlight(hasHighlight?: boolean): BarChartModule
+  highlightBarFunction(
+    highlightFunc: (bar: BarSelection) => void | null
+  ): BarChartModule
   isHorizontal(isHorizontal?: boolean): BarChartModule
+  labelsMargin(margin?: number): BarChartModule
   labelsNumberFormat(format?: string): BarChartModule
   labelsSize(size?: number): BarChartModule
   percentageAxisToMaxRatio(ratio?: number): BarChartModule
