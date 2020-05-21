@@ -1,9 +1,9 @@
-import { scatter, ScatterPlotModule } from 'britecharts';
+import { scatterPlot, ScatterPlotModule } from 'britecharts';
 
 export const constructChart = (containerNode: Element): ScatterPlotModule => {
-  const scatterPlot = scatter();
+  const scatter = scatterPlot();
 
-  scatterPlot
+  scatter
     .width(containerNode.clientWidth)
     .aspectRatio(0.7)
     .hasTrendline(true)
@@ -13,5 +13,5 @@ export const constructChart = (containerNode: Element): ScatterPlotModule => {
     .xAxisFormat('.1f')
     .yAxisFormat('$');
 
-  return scatterPlot;
+  return scatter;
 };

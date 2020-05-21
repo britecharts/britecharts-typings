@@ -3,15 +3,15 @@ import { GridTypes } from '@common/grid';
 import { ChartModuleSelection } from '@common/selection';
 
 export enum ScatterPlotKeys {
-  Ranges = 'ranges',
-  Measures = 'measures',
-  Markers = 'markers',
+  Name = 'name',
+  X = 'x',
+  Y = 'y',
 }
 
 export type ScatterPlotDataShape = {
-  [ScatterPlotKeys.Ranges]: [number?, number?, number?];
-  [ScatterPlotKeys.Measures]: [number?, number?, number?];
-  [ScatterPlotKeys.Markers]: [number?];
+  [ScatterPlotKeys.Name]: string;
+  [ScatterPlotKeys.X]: number;
+  [ScatterPlotKeys.Y]: number;
 };
 
 export type ScatterPlotBaseAPI = Omit<
@@ -38,11 +38,11 @@ export interface ScatterPlotAPI extends ScatterPlotBaseAPI {
   yTicks(ticks?: number): ScatterPlotModule;
 }
 
-export type ScatterPlotModule = ChartModuleSelection<ScatterPlotDataShape> &
+export type ScatterPlotModule = ChartModuleSelection<ScatterPlotDataShape[]> &
   ScatterPlotAPI;
 
 /**
  * import {scatter} from 'britecharts;
  * scatter().width(100).height(100)
  */
-export function scatter(): ScatterPlotModule;
+export function scatterPlot(): ScatterPlotModule;
