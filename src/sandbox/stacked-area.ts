@@ -3,18 +3,13 @@ import { stackedArea, StackedAreaChartModule } from 'britecharts';
 export const constructChart = (
   containerNode: Element
 ): StackedAreaChartModule => {
-  const donutChart = stackedArea();
+  const stackedAreaChart = stackedArea();
 
-  donutChart
-    .margin({
-      left: 120,
-      right: 20,
-      top: 20,
-      bottom: 40,
-    })
-    .width(containerNode.clientWidth)
-    .height(500)
-    .centeredTextFunction((d) => `${d.quantity} units`);
+  stackedAreaChart
+    .isAnimated(true)
+    .tooltipThreshold(600)
+    .grid('full')
+    .width(containerNode.clientWidth);
 
-  return donutChart;
+  return stackedAreaChart;
 };
