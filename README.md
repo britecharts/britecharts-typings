@@ -1,4 +1,5 @@
-# webpack-typescript-britecharts-setup
+# britecharts-typings
+Typings for Britecharts. This is a training ground to be transferred to [Definitely Typed](https://github.com/DefinitelyTyped/DefinitelyTyped) list of available typings that could later be installed as so: `yarn add -D @types/britecharts`.
 
 ## How to Contribute
 
