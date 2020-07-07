@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Create a bug report for Britecharts-React
+about: Create a bug report for Britecharts-Typings
 title: Bug Report
 labels: bug
 assignees: ''

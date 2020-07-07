@@ -1,6 +1,6 @@
 ---
 name: Feature Request
-about: Create a feature request proposal for Britecharts React
+about: Create a feature request proposal for Britecharts Typings
 title: Feature Proposal
 labels: proposal
 assignees: ''
