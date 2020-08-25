@@ -16,6 +16,7 @@ export type ColorsSchemaHumanType = {
 }
 
 export type ColorsSchemasType = string[]
+export type ColorGradientType = [string, string]
 
 export type ColorSchemas = {
   [key in keyof typeof ColorSchema]: ColorsSchemasType
@@ -28,7 +29,7 @@ export enum ColorGradient {
 }
 
 export type ColorGradients = {
-  [key in keyof typeof ColorGradient]: ColorsSchemasType
+  [key in keyof typeof ColorGradient]: ColorGradientType
 }
 
 export type ColorGradientsHuman = {

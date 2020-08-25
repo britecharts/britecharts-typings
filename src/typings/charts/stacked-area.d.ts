@@ -3,6 +3,7 @@ import { GridTypes } from '@common/grid';
 import { ChartModuleSelection } from '@common/selection';
 import { AxisTimeCombination } from '@helpers/constants';
 
+
 export enum StackedAreaChartKeys {
   Date = 'date',
   Name = 'name',
