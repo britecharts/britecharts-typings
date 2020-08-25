@@ -22,7 +22,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "britecharts": "^2.15.1",
+    "britecharts": "^2.16.1",
     "d3-selection": "^1.4.1"
   }
 }

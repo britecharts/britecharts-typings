@@ -535,13 +535,13 @@ braces@^3.0.1, braces@~3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
-britecharts@^2.15.1:
-  version "2.15.1"
-  resolved "https://registry.yarnpkg.com/britecharts/-/britecharts-2.15.1.tgz#c126f5b1258407d7b4d6e2450826f3e4819417c2"
-  integrity sha512-9R0hzEx77sUC1pEtwFKyREEoxbVhvhwJAytGTC/YypXo7YOlBZnFdcRFz7D9c2kljKd7cNJA/ZpYFRsysMLl6Q==
+britecharts@^2.16.1:
+  version "2.16.1"
+  resolved "https://registry.yarnpkg.com/britecharts/-/britecharts-2.16.1.tgz#81df7c56ab587232127ca6ae4cee116ae446a568"
+  integrity sha512-EijqLa0QAy+MmSY8Uqd7jFrOiAMg4/lscIiv7uOxtin8o7HZ+oYhrQs3MS0pbegLgYZQ8R0H6F6D9MDr01JFzA==
   dependencies:
     base-64 "^0.1.0"
-    d3 "^5.9.2"
+    d3 "^5.16.0"
     lodash.assign "^4.2.0"
 
 brorand@^1.0.1:
@@ -1234,7 +1234,7 @@ d3-zoom@1:
     d3-selection "1"
     d3-transition "1"
 
-d3@^5.9.2:
+d3@^5.16.0:
   version "5.16.0"
   resolved "https://registry.yarnpkg.com/d3/-/d3-5.16.0.tgz#9c5e8d3b56403c79d4ed42fbd62f6113f199c877"
   integrity sha512-4PL5hHaHwX4m7Zr1UapXW23apo6pexCgdetdJ5kTmADpG/7T9Gkxw0M0tf/pjoB63ezCCm0u5UaFYy2aMt0Mcw==

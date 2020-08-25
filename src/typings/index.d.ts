@@ -1,5 +1,6 @@
 declare module 'britecharts' {
   export * from '@charts/bar-chart';
+  export * from '@charts/brush-chart';
   export * from '@charts/donut-chart';
   export * from '@charts/stacked-area';
   export * from '@charts/bullet-chart';
