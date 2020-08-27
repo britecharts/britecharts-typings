@@ -12,8 +12,7 @@ export const constructChart = (containerNode: Element): LegendModule => {
     })
     .width(containerNode.clientWidth)
     .height(200)
-    .colorSchema(colors.colorSchemas.britecharts)
-    // .highlight(11);
+    .colorSchema(colors.colorSchemas.britecharts);
 
   return legendComponent;
 };
