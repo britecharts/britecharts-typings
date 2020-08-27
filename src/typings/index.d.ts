@@ -5,6 +5,7 @@ declare module 'britecharts' {
   export * from '@charts/stacked-area';
   export * from '@charts/bullet-chart';
   export * from '@charts/scatter-plot';
+  export * from '@charts/legend-component';
   export * from '@helpers/colors';
   export * from '@helpers/constants';
 }
