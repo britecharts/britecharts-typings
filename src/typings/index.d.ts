@@ -1,9 +1,10 @@
 declare module 'britecharts' {
   export * from '@charts/bar-chart';
   export * from '@charts/brush-chart';
-  export * from '@charts/donut-chart';
-  export * from '@charts/stacked-area';
   export * from '@charts/bullet-chart';
+  export * from '@charts/donut-chart';
+  export * from '@charts/grouped-bar-chart';
+  export * from '@charts/stacked-area';
   export * from '@charts/scatter-plot';
   export * from '@charts/legend-component';
   export * from '@helpers/colors';
