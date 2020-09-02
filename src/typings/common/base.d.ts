@@ -29,3 +29,15 @@ export interface ComponentBaseAPI<T> {
   margin(margin?: ChartMarginParams): T & ComponentBaseAPI<T>;
   width(width?: number): T & ComponentBaseAPI<T>;
 }
+
+// TODO: Deprecate once the API gets consistent
+// https://github.com/britecharts/britecharts/issues/842
+// https://github.com/britecharts/britecharts/issues/841
+export interface GroupedBarBaseAPI<T> {
+  colorSchema(schema: ColorsSchemasType): T & ChartBaseAPI<T>;
+  isAnimated(isAnimated?: boolean): T & ChartBaseAPI<T>;
+  height(height?: number): T & ChartBaseAPI<T>;
+  loadingState(markup?: string): T & ChartBaseAPI<T>;
+  margin(margin?: ChartMarginParams): T & ChartBaseAPI<T>;
+  width(width?: number): T & ChartBaseAPI<T>;
+}
