@@ -4,6 +4,7 @@ declare module 'britecharts' {
   export * from '@charts/bullet-chart';
   export * from '@charts/donut-chart';
   export * from '@charts/grouped-bar-chart';
+  export * from '@charts/heatmap-chart';
   export * from '@charts/stacked-area';
   export * from '@charts/scatter-plot';
   export * from '@charts/legend-component';
