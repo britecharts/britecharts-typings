@@ -41,3 +41,12 @@ export interface GroupedBarBaseAPI<T> {
   margin(margin?: ChartMarginParams): T & ChartBaseAPI<T>;
   width(width?: number): T & ChartBaseAPI<T>;
 }
+
+// Using it on Heatmap until getting a good set of API configs
+// https://github.com/britecharts/britecharts/issues/845
+export interface BaseAPI<T> {
+  colorSchema(schema: ColorsSchemasType): T & ChartBaseAPI<T>;
+  height(height?: number): T & ChartBaseAPI<T>;
+  margin(margin?: ChartMarginParams): T & ChartBaseAPI<T>;
+  width(width?: number): T & ChartBaseAPI<T>;
+}

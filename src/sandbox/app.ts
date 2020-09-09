@@ -1,12 +1,15 @@
 import { select } from 'd3-selection';
+
 import { SAMPLE_BAR_DATA } from '../data/bar-sample';
 import { SAMPLE_GROUPED_BAR_DATA } from '../data/grouped-bar-sample';
+import { SAMPLE_HEATMAP_DATA } from '../data/heatmap-sample';
 import { SAMPLE_BRUSH_DATA } from '../data/brush-sample';
 import { SAMPLE_LEGEND_DATA } from '../data/legend-sample';
 import { SAMPLE_DONUT_DATA } from '../data/donut-sample';
 import { SAMPLE_STACKED_AREA_DATA } from '../data/stacked-area-sample';
 import { SAMPLE_BULLET_DATA } from '../data/bullet-sample';
 import { SAMPLE_SCATTER_PLOT_DATA } from '../data/scatter-plot-sample';
+
 import { constructChart as constructBarChart } from './bar';
 import { constructChart as constructBrushChart } from './brush';
 import { constructChart as constructLegend } from './legend';
@@ -15,6 +18,7 @@ import { constructChart as constructBulletChart } from './bullet';
 import { constructChart as constructStackedAreaChart } from './stacked-area';
 import { constructChart as constructScatterPlot } from './scatter-plot';
 import { constructChart as constructGroupedBarChart } from './grouped-bar';
+import { constructChart as constructHeatmapChart } from './heatmap';
 import { buildTemplate } from './template';
 
 export default (window: Window) => {
@@ -24,6 +28,10 @@ export default (window: Window) => {
 
   const containerNode = document.querySelector(`#${chartContainerId}`);
   const container = select(containerNode);
+
+  container
+    .datum(SAMPLE_HEATMAP_DATA)
+    .call(constructHeatmapChart(containerNode));
 
   container
     .datum(SAMPLE_GROUPED_BAR_DATA)
