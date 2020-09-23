@@ -5,6 +5,7 @@ export const constructChart = (containerNode: Element): ScatterPlotModule => {
 
   scatter
     .width(containerNode.clientWidth)
+    .margin({bottom: 60, left: 100})
     .aspectRatio(0.7)
     .hasTrendline(true)
     .grid('horizontal')

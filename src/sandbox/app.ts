@@ -9,6 +9,7 @@ import { SAMPLE_DONUT_DATA } from '../data/donut-sample';
 import { SAMPLE_STACKED_AREA_DATA } from '../data/stacked-area-sample';
 import { SAMPLE_BULLET_DATA } from '../data/bullet-sample';
 import { SAMPLE_SCATTER_PLOT_DATA } from '../data/scatter-plot-sample';
+import { SAMPLE_SPARKLINE_DATA } from '../data/sparkline-sample';
 
 import { constructChart as constructBarChart } from './bar';
 import { constructChart as constructBrushChart } from './brush';
@@ -17,6 +18,7 @@ import { constructChart as constructDonutChart } from './donut';
 import { constructChart as constructBulletChart } from './bullet';
 import { constructChart as constructStackedAreaChart } from './stacked-area';
 import { constructChart as constructScatterPlot } from './scatter-plot';
+import { constructChart as constructSparklineChart } from './sparkline';
 import { constructChart as constructGroupedBarChart } from './grouped-bar';
 import { constructChart as constructHeatmapChart } from './heatmap';
 import { buildTemplate } from './template';
@@ -60,8 +62,12 @@ export default (window: Window) => {
   container
     .datum(SAMPLE_STACKED_AREA_DATA)
     .call(constructStackedAreaChart(containerNode));
-    
+
   container
     .datum(SAMPLE_SCATTER_PLOT_DATA)
     .call(constructScatterPlot(containerNode));
+
+  container
+    .datum(SAMPLE_SPARKLINE_DATA)
+    .call(constructSparklineChart(containerNode));
 };
