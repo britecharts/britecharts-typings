@@ -19,13 +19,21 @@ export type SparklineSelection = Selection<
   any
 >;
 
+export interface SparkelineTitleTextStyle {
+  'font-family'?: string;
+  'font-size'?: string,
+  'font-weight'?: number,
+  'font-style'?: string,
+  'fill'?: string,
+}
+
 export interface SparklineChartAPI extends
     ChartDimensionsAPI<SparklineChartModule>,
     ChartAnimationAPI<SparklineChartModule> {
   areaGradient(gradient?: [string, string]): SparklineChartModule;
   lineGradient(gradient?: [string, string]): SparklineChartModule;
   titleText(title?: string): SparklineChartModule;
-  titleTextStyle(titleStyle?: any): SparklineChartModule;
+  titleTextStyle(titleStyle?: SparkelineTitleTextStyle): SparklineChartModule;
   loadingState(markup?: string): SparklineChartModule;
 }
 
