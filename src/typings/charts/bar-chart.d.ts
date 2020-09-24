@@ -32,10 +32,10 @@ export interface BarChartAPI extends ChartBaseAPI<BarChartModule> {
   labelsMargin(margin?: number): BarChartModule;
   labelsNumberFormat(format?: string): BarChartModule;
   labelsSize(size?: number): BarChartModule;
-  percentageAxisToMaxRatio(ratio?: number): BarChartModule;
   orderingFunction(
     orderingFunc: (a: BarChartDataShape, b: BarChartDataShape) => void
   ): BarChartModule;
+  percentageAxisToMaxRatio(ratio?: number): BarChartModule;
   shouldReverseColorList(shouldReverse?: boolean): BarChartModule;
   valueLabel(valueLabel?: string): BarChartModule;
   xAxisLabel(xAxisLabel?: string): BarChartModule;

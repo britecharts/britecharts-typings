@@ -8,7 +8,8 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "start:dev": "webpack-dev-server"
+    "start:dev": "webpack-dev-server",
+    "start": "webpack-dev-server"
   },
   "devDependencies": {
     "@types/d3-selection": "^1.4.1",

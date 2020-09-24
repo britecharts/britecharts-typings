@@ -30,7 +30,7 @@ export interface ComponentBaseAPI<T> {
   width(width?: number): T & ComponentBaseAPI<T>;
 }
 
-// TODO: Deprecate once the API gets consistent
+// TODO: Deprecate once the API gets consistent (Release 3.0 at least)
 // https://github.com/britecharts/britecharts/issues/842
 // https://github.com/britecharts/britecharts/issues/841
 export interface GroupedBarBaseAPI<T> {
@@ -40,6 +40,15 @@ export interface GroupedBarBaseAPI<T> {
   loadingState(markup?: string): T & GroupedBarBaseAPI<T>;
   margin(margin?: ChartMarginParams): T & GroupedBarBaseAPI<T>;
   width(width?: number): T & GroupedBarBaseAPI<T>;
+}
+
+export interface StackedBarBaseAPI<T> {
+  colorSchema(schema: ColorsSchemasType): T & StackedBarBaseAPI<T>;
+  isAnimated(isAnimated?: boolean): T & StackedBarBaseAPI<T>;
+  height(height?: number): T & StackedBarBaseAPI<T>;
+  loadingState(markup?: string): T & StackedBarBaseAPI<T>;
+  margin(margin?: ChartMarginParams): T & StackedBarBaseAPI<T>;
+  width(width?: number): T & StackedBarBaseAPI<T>;
 }
 
 // Using it on Heatmap until getting a good set of API configs

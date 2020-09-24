@@ -28,10 +28,10 @@ export interface BrushChartAPI extends ChartBaseAPIMinimal<BrushChartModule> {
   };
   dateRange(dateRange?: [string, string]): BrushChartModule;
   gradient(gradient?: ColorGradientType): BrushChartModule;
+  roundingTimeInterval(roundingTimeInterval?: string): BrushChartKeys;
   xAxisCustomFormat(format?: string): BrushChartModule;
   xAxisFormat(format?: string): BrushChartModule;
   xTicks(ticks?: number): BrushChartModule;
-  roundingTimeInterval(roundingTimeInterval?: string): BrushChartKeys;
 }
 
 export type BrushChartModule = ChartModuleSelection<BrushChartDataShape[]> &

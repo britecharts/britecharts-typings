@@ -28,18 +28,18 @@ type Offset = {
 }
 
 export interface GroupedBarChartAPI extends GroupedBarBaseAPI<GroupedBarChartModule> {
-  yTickTextOffset(yTickTextOffset?: Offset): GroupedBarChartModule;
-  yAxisLabelOffset(yAxisLabelOffset?: number): GroupedBarChartModule;
-  yAxisLabel(yAxisLabel?: string): GroupedBarChartModule;
-  xTicks(ticks?: number): GroupedBarChartModule;
-  valueLabelFormat(format?: string): GroupedBarChartModule;
-  tooltipThreshold(threshold?: number): GroupedBarChartModule;
-  yTicks(ticks?: number): GroupedBarChartModule;
-  isHorizontal(isHorizontal?: boolean): GroupedBarChartModule;
-  grid(gridMode?: 'vertical'|'horizontal'|'full'): GroupedBarChartModule;
-  betweenGroupsPadding(padding?: number): GroupedBarChartModule;
-  betweenBarsPadding(padding?: number): GroupedBarChartModule;
   aspectRatio(ratio?: number): GroupedBarChartModule;
+  betweenBarsPadding(padding?: number): GroupedBarChartModule;
+  betweenGroupsPadding(padding?: number): GroupedBarChartModule;
+  grid(gridMode?: 'vertical'|'horizontal'|'full'): GroupedBarChartModule;
+  isHorizontal(isHorizontal?: boolean): GroupedBarChartModule;
+  tooltipThreshold(threshold?: number): GroupedBarChartModule;
+  valueLabelFormat(format?: string): GroupedBarChartModule;
+  xTicks(ticks?: number): GroupedBarChartModule;
+  yAxisLabel(yAxisLabel?: string): GroupedBarChartModule;
+  yAxisLabelOffset(yAxisLabelOffset?: number): GroupedBarChartModule;
+  yTicks(ticks?: number): GroupedBarChartModule;
+  yTickTextOffset(yTickTextOffset?: Offset): GroupedBarChartModule;
 }
 
 export type GroupedBarChartModule = ChartModuleSelection<GroupedBarChartDataShape[]> &

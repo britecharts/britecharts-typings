@@ -28,8 +28,8 @@ export interface StackedAreaChartAPI
     [key in keyof typeof AxisTimeCombination]: AxisTimeCombination | string;
   };
   areaCurve(curveType?: string): StackedAreaChartModule;
-  aspectRatio(ratio?: number): StackedAreaChartModule;
   areaOpacity(opacity?: number): StackedAreaChartModule;
+  aspectRatio(ratio?: number): StackedAreaChartModule;
   dateLabel(label?: string): StackedAreaChartModule;
   emptyDataConfig(config?: StackedAreaEmptyDataConfig): StackedAreaChartModule;
   grid(gridType?: GridTypes): StackedAreaChartModule;
