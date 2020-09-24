@@ -7,6 +7,7 @@ declare module 'britecharts' {
   export * from '@charts/heatmap-chart';
   export * from '@charts/stacked-area';
   export * from '@charts/scatter-plot';
+  export * from '@charts/sparkline-chart';
   export * from '@charts/legend-component';
   export * from '@helpers/colors';
   export * from '@helpers/constants';
