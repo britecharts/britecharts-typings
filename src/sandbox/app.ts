@@ -2,6 +2,7 @@ import { select } from 'd3-selection';
 
 import { SAMPLE_BAR_DATA } from '../data/bar-sample';
 import { SAMPLE_GROUPED_BAR_DATA } from '../data/grouped-bar-sample';
+import { SAMPLE_STACKED_BAR_DATA } from '../data/stacked-bar-sample';
 import { SAMPLE_HEATMAP_DATA } from '../data/heatmap-sample';
 import { SAMPLE_BRUSH_DATA } from '../data/brush-sample';
 import { SAMPLE_LEGEND_DATA } from '../data/legend-sample';
@@ -20,6 +21,7 @@ import { constructChart as constructStackedAreaChart } from './stacked-area';
 import { constructChart as constructScatterPlot } from './scatter-plot';
 import { constructChart as constructSparklineChart } from './sparkline';
 import { constructChart as constructGroupedBarChart } from './grouped-bar';
+import { constructChart as constructStackedBarChart } from './stacked-bar';
 import { constructChart as constructHeatmapChart } from './heatmap';
 import { buildTemplate } from './template';
 
@@ -38,6 +40,10 @@ export default (window: Window) => {
   container
     .datum(SAMPLE_GROUPED_BAR_DATA)
     .call(constructGroupedBarChart(containerNode));
+
+  container
+    .datum(SAMPLE_STACKED_BAR_DATA)
+    .call(constructStackedBarChart(containerNode));
 
   container
     .datum(SAMPLE_LEGEND_DATA)

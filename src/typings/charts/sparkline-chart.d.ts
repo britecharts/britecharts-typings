@@ -32,9 +32,9 @@ export interface SparklineChartAPI extends
     ChartAnimationAPI<SparklineChartModule> {
   areaGradient(gradient?: [string, string]): SparklineChartModule;
   lineGradient(gradient?: [string, string]): SparklineChartModule;
+  loadingState(markup?: string): SparklineChartModule;
   titleText(title?: string): SparklineChartModule;
   titleTextStyle(titleStyle?: SparkelineTitleTextStyle): SparklineChartModule;
-  loadingState(markup?: string): SparklineChartModule;
 }
 
 export type SparklineChartModule = ChartModuleSelection<SparklineChartDataShape[]> &
