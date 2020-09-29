@@ -11,6 +11,7 @@ import { SAMPLE_STACKED_AREA_DATA } from '../data/stacked-area-sample';
 import { SAMPLE_BULLET_DATA } from '../data/bullet-sample';
 import { SAMPLE_SCATTER_PLOT_DATA } from '../data/scatter-plot-sample';
 import { SAMPLE_SPARKLINE_DATA } from '../data/sparkline-sample';
+import { SAMPLE_LINE_CHART_DATA } from '../data/line-chart-sample';
 
 import { constructChart as constructBarChart } from './bar';
 import { constructChart as constructBrushChart } from './brush';
@@ -20,6 +21,7 @@ import { constructChart as constructBulletChart } from './bullet';
 import { constructChart as constructStackedAreaChart } from './stacked-area';
 import { constructChart as constructScatterPlot } from './scatter-plot';
 import { constructChart as constructSparklineChart } from './sparkline';
+import { constructChart as constructLineChart } from './line-chart';
 import { constructChart as constructGroupedBarChart } from './grouped-bar';
 import { constructChart as constructStackedBarChart } from './stacked-bar';
 import { constructChart as constructHeatmapChart } from './heatmap';
@@ -32,6 +34,10 @@ export default (window: Window) => {
 
   const containerNode = document.querySelector(`#${chartContainerId}`);
   const container = select(containerNode);
+
+  container
+    .datum(SAMPLE_LINE_CHART_DATA)
+    .call(constructLineChart(containerNode));
 
   container
     .datum(SAMPLE_HEATMAP_DATA)

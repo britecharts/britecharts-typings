@@ -30,13 +30,11 @@ export interface StackedAreaChartAPI
   areaCurve(curveType?: string): StackedAreaChartModule;
   areaOpacity(opacity?: number): StackedAreaChartModule;
   aspectRatio(ratio?: number): StackedAreaChartModule;
-  dateLabel(label?: string): StackedAreaChartModule;
   emptyDataConfig(config?: StackedAreaEmptyDataConfig): StackedAreaChartModule;
   grid(gridType?: GridTypes): StackedAreaChartModule;
   keyLabel(label?: string): StackedAreaChartModule;
   tooltipThreshold(threshold?: number): StackedAreaChartModule;
   topicsOrder(orderList?: string[]): StackedAreaChartModule;
-  valueLabel(label?: string): StackedAreaChartModule;
   xAxisCustomFormat(format?: string): StackedAreaChartModule;
   xAxisFormat(format?: string): StackedAreaChartModule;
   xAxisScale(scale?: 'linear' | 'logarithmic'): StackedAreaChartModule;
