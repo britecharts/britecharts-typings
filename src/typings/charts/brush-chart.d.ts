@@ -1,4 +1,4 @@
-import { ChartBaseAPIMinimal } from '@common/base';
+import { ChartBaseAPIMinimal, InteractiveChartAPI } from '@common/base';
 import { ChartModuleSelection } from '@common/selection';
 import { BaseType, Selection } from 'd3-selection';
 import { AxisTimeCombination } from '@helpers/constants';
@@ -22,7 +22,7 @@ export type BrushSelection = Selection<
   any
 >;
 
-export interface BrushChartAPI extends ChartBaseAPIMinimal<BrushChartModule> {
+export interface BrushChartAPI extends ChartBaseAPIMinimal<BrushChartModule>, InteractiveChartAPI<BrushChartAPI> {
   axisTimeCombinations: {
     [key in keyof typeof AxisTimeCombination]: AxisTimeCombination | string;
   };
