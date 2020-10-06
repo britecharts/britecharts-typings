@@ -1,7 +1,8 @@
 import { LocalObject } from '@common/local';
-import { StackedBarBaseAPI, InteractiveChartAPI } from '@common/base';
+import { StackedBarBaseAPI, InteractiveChartAPI, ExportableChartAPI } from '@common/base';
 import { ChartModuleSelection } from '@common/selection';
 import { BaseType, Selection } from 'd3-selection';
+import { StackedAreaChartModule } from 'britecharts';
 
 
 export enum StackedBarChartKeys {
@@ -28,7 +29,7 @@ type Offset = {
   y: number;
 }
 
-export interface StackedBarChartAPI extends StackedBarBaseAPI<StackedBarChartModule>, InteractiveChartAPI<StackedBarChartModule> {
+export interface StackedBarChartAPI extends StackedBarBaseAPI<StackedBarChartModule>, InteractiveChartAPI<StackedBarChartModule>, ExportableChartAPI<StackedAreaChartModule> {
   aspectRatio(ratio?: number): StackedBarChartModule;
   betweenBarsPadding(padding?: number): StackedBarChartModule;
   grid(gridMode?: 'vertical'|'horizontal'|'full'): StackedBarChartModule;

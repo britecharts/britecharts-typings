@@ -1,4 +1,4 @@
-import { BaseAPI } from '@common/base';
+import { BaseAPI, ExportableChartAPI } from '@common/base';
 import { ChartModuleSelection } from '@common/selection';
 
 export enum HeatmapChartKeys {
@@ -13,7 +13,7 @@ export type HeatmapChartDataShape = {
   [HeatmapChartKeys.Value]: number;
 };
 
-export interface HeatmapChartAPI extends BaseAPI<HeatmapChartModule> {
+export interface HeatmapChartAPI extends BaseAPI<HeatmapChartModule>, ExportableChartAPI<HeatmapChartModule>  {
   yAxisLabels(labels?: string[]): HeatmapChartModule;
   boxSize(size?: number): HeatmapChartModule;
 }

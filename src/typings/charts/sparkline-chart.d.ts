@@ -1,4 +1,4 @@
-import { ChartDimensionsAPI, ChartAnimationAPI } from '@common/base';
+import { ChartDimensionsAPI, ChartAnimationAPI, ExportableChartAPI } from '@common/base';
 import { ChartModuleSelection } from '@common/selection';
 import { BaseType, Selection } from 'd3-selection';
 
@@ -29,7 +29,8 @@ export interface SparkelineTitleTextStyle {
 
 export interface SparklineChartAPI extends
     ChartDimensionsAPI<SparklineChartModule>,
-    ChartAnimationAPI<SparklineChartModule> {
+    ChartAnimationAPI<SparklineChartModule>,
+    ExportableChartAPI<SparklineChartModule>  {
   areaGradient(gradient?: [string, string]): SparklineChartModule;
   lineGradient(gradient?: [string, string]): SparklineChartModule;
   loadingState(markup?: string): SparklineChartModule;

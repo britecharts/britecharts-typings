@@ -1,4 +1,4 @@
-import { ChartBaseAPI } from '@common/base';
+import { ChartBaseAPI, ExportableChartAPI } from '@common/base';
 import { ChartModuleSelection } from '@common/selection';
 
 export enum BulletChartKeys {
@@ -18,7 +18,7 @@ export type BulletChartBaseAPI = Omit<
   'locale' | 'isAnimated' | 'loadingState'
 >;
 
-export interface BulletChartAPI extends BulletChartBaseAPI {
+export interface BulletChartAPI extends BulletChartBaseAPI, ExportableChartAPI<BulletChartModule> {
   aspectRatio(ratio?: number): BulletChartModule;
   customSubtitle(subtitle?: number): BulletChartModule;
   customTitle(title?: number): BulletChartModule;

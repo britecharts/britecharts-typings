@@ -76,3 +76,7 @@ export interface ChartAnimationAPI<T> {
   isAnimated(isAnimated?: boolean): T & ChartAnimationAPI<T>;
   duration(duration?: number): T & ChartAnimationAPI<T>;
 }
+
+export interface ExportableChartAPI<T> {
+  exportChart(filename: string, title: string): void;
+}

@@ -1,4 +1,4 @@
-import { ChartBaseAPI, InteractiveChartAPI } from '@common/base';
+import { ChartBaseAPI, InteractiveChartAPI, ExportableChartAPI } from '@common/base';
 import { GridTypes } from '@common/grid';
 import { ChartModuleSelection } from '@common/selection';
 import { AxisTimeCombination } from '@helpers/constants';
@@ -24,7 +24,7 @@ export interface StackedAreaEmptyDataConfig {
 }
 
 export interface StackedAreaChartAPI
-  extends ChartBaseAPI<StackedAreaChartModule>, InteractiveChartAPI<StackedBarChartModule> {
+  extends ChartBaseAPI<StackedAreaChartModule>, InteractiveChartAPI<StackedBarChartModule>, ExportableChartAPI<StackedAreaChartModule> {
   axisTimeCombinations: {
     [key in keyof typeof AxisTimeCombination]: AxisTimeCombination | string;
   };
