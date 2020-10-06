@@ -1,7 +1,8 @@
-import { ChartBaseAPI } from '@common/base';
+import { ChartBaseAPI, InteractiveChartAPI } from '@common/base';
 import { GridTypes } from '@common/grid';
 import { ChartModuleSelection } from '@common/selection';
 import { AxisTimeCombination } from '@helpers/constants';
+import { StackedBarChartModule } from 'britecharts';
 
 
 export enum StackedAreaChartKeys {
@@ -23,7 +24,7 @@ export interface StackedAreaEmptyDataConfig {
 }
 
 export interface StackedAreaChartAPI
-  extends ChartBaseAPI<StackedAreaChartModule> {
+  extends ChartBaseAPI<StackedAreaChartModule>, InteractiveChartAPI<StackedBarChartModule> {
   axisTimeCombinations: {
     [key in keyof typeof AxisTimeCombination]: AxisTimeCombination | string;
   };

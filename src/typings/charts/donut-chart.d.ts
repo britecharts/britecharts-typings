@@ -1,4 +1,4 @@
-import { ChartBaseAPI } from '@common/base';
+import { ChartBaseAPI, InteractiveChartAPI } from '@common/base';
 import { ChartModuleSelection } from '@common/selection';
 
 export enum DonutChartKeys {
@@ -20,7 +20,7 @@ export interface DonutEmptyDataConfig {
   showEmptySlice: boolean;
 }
 
-export interface DonutChartAPI extends ChartBaseAPI<DonutChartModule> {
+export interface DonutChartAPI extends ChartBaseAPI<DonutChartModule>, InteractiveChartAPI<DonutChartModule> {
   centeredTextFunction(
     centeredTextFunc: (a: DonutChartDataShape) => void
   ): DonutChartModule;

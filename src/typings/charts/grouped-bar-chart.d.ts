@@ -1,4 +1,4 @@
-import { GroupedBarBaseAPI } from '@common/base';
+import { GroupedBarBaseAPI, InteractiveChartAPI } from '@common/base';
 import { ChartModuleSelection } from '@common/selection';
 import { BaseType, Selection } from 'd3-selection';
 
@@ -27,7 +27,7 @@ type Offset = {
   y: number;
 }
 
-export interface GroupedBarChartAPI extends GroupedBarBaseAPI<GroupedBarChartModule> {
+export interface GroupedBarChartAPI extends GroupedBarBaseAPI<GroupedBarChartModule>, InteractiveChartAPI<GroupedBarChartModule> {
   aspectRatio(ratio?: number): GroupedBarChartModule;
   betweenBarsPadding(padding?: number): GroupedBarChartModule;
   betweenGroupsPadding(padding?: number): GroupedBarChartModule;

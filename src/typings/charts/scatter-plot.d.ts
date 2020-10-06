@@ -1,4 +1,4 @@
-import { ChartBaseAPI } from '@common/base';
+import { ChartBaseAPI, InteractiveChartAPI } from '@common/base';
 import { GridTypes } from '@common/grid';
 import { ChartModuleSelection } from '@common/selection';
 
@@ -19,7 +19,7 @@ export type ScatterPlotBaseAPI = Omit<
   'locale' | 'loadingState'
 >;
 
-export interface ScatterPlotAPI extends ScatterPlotBaseAPI {
+export interface ScatterPlotAPI extends ScatterPlotBaseAPI, InteractiveChartAPI<ScatterPlotModule> {
   aspectRatio(ratio?: number): ScatterPlotModule;
   circleOpacity(opacity?: number): ScatterPlotModule;
   grid(opacity?: GridTypes): ScatterPlotModule;

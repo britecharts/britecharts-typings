@@ -1,4 +1,4 @@
-import { ChartBaseAPI } from '@common/base';
+import { ChartBaseAPI, InteractiveChartAPI } from '@common/base';
 import { ChartModuleSelection } from '@common/selection';
 import { BaseType, Selection } from 'd3-selection';
 
@@ -19,7 +19,7 @@ export type BarSelection = Selection<
   any
 >;
 
-export interface BarChartAPI extends ChartBaseAPI<BarChartModule> {
+export interface BarChartAPI extends ChartBaseAPI<BarChartModule>, InteractiveChartAPI<BarChartModule> {
   betweenBarsPadding(padding?: number): BarChartModule;
   chartGradient(gradient?: [string, string]): BarChartModule;
   enableLabels(shouldEnable?: boolean): BarChartModule;
