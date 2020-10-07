@@ -1,5 +1,6 @@
 import { LocalObject } from '@common/local';
 import { StackedBarBaseAPI, InteractiveChartAPI, ExportableChartAPI } from '@common/base';
+import { GridTypes } from '@common/grid';
 import { ChartModuleSelection } from '@common/selection';
 import { BaseType, Selection } from 'd3-selection';
 import { StackedAreaChartModule } from 'britecharts';
@@ -32,7 +33,7 @@ type Offset = {
 export interface StackedBarChartAPI extends StackedBarBaseAPI<StackedBarChartModule>, InteractiveChartAPI<StackedBarChartModule>, ExportableChartAPI<StackedAreaChartModule> {
   aspectRatio(ratio?: number): StackedBarChartModule;
   betweenBarsPadding(padding?: number): StackedBarChartModule;
-  grid(gridMode?: 'vertical'|'horizontal'|'full'): StackedBarChartModule;
+  grid(gridMode?: GridTypes): StackedBarChartModule;
   hasPercentage(hasPercentage?: boolean): StackedBarChartModule;
   hasReversedStacks(hasReversedStacks?: boolean): StackedBarChartModule;
   isHorizontal(isHorizontal?: boolean): StackedBarChartModule;

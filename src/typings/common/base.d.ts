@@ -77,6 +77,13 @@ export interface ChartAnimationAPI<T> {
   duration(duration?: number): T & ChartAnimationAPI<T>;
 }
 
-export interface ExportableChartAPI<T> {
-  exportChart(filename: string, title: string): void;
+export interface ExportableChartAPI {
+  /**
+   * Executes a command that triggers the download of the current chart as a .png image file
+   * @param filename  The filename of the downloaded image
+   * @param title     The title attached to the image
+   */
+  exportChart(filename: string, title: string): Promise<void>;  
+  // Marked as promise as it is asynchronous, filed a ticket to research about returninga real promise
+  // https://github.com/britecharts/britecharts/issues/858
 }
