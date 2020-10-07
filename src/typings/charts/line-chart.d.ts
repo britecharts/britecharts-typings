@@ -1,4 +1,4 @@
-import { ChartBaseAPI, InteractiveChartAPI } from '@common/base';
+import { ChartBaseAPI, InteractiveChartAPI, ExportableChartAPI } from '@common/base';
 import { GridTypes } from '@common/grid';
 import { ChartModuleSelection } from '@common/selection';
 import { AxisTimeCombination } from '@helpers/constants';
@@ -35,7 +35,7 @@ export interface CustomLine {
 }
 
 export interface LineChartAPI
-  extends ChartBaseAPI<LineChartModule>, InteractiveChartAPI<LineChartModule> {
+  extends ChartBaseAPI<LineChartModule>, InteractiveChartAPI<LineChartModule>, ExportableChartAPI<LineChartModule> {
   axisTimeCombinations: {
     [key in keyof typeof AxisTimeCombination]: AxisTimeCombination | string;
   };
