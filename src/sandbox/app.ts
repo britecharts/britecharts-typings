@@ -25,6 +25,8 @@ import { constructChart as constructLineChart } from './line-chart';
 import { constructChart as constructGroupedBarChart } from './grouped-bar';
 import { constructChart as constructStackedBarChart } from './stacked-bar';
 import { constructChart as constructHeatmapChart } from './heatmap';
+import { constructChart as constructBarWithMinitooltip } from './mini-tooltip';
+
 import { buildTemplate } from './template';
 
 export default (window: Window) => {
@@ -82,4 +84,12 @@ export default (window: Window) => {
   container
     .datum(SAMPLE_SPARKLINE_DATA)
     .call(constructSparklineChart(containerNode));
+
+  const {barChart, tooltip} = constructBarWithMinitooltip(containerNode);
+  container
+    .datum(SAMPLE_BAR_DATA)
+    .call(barChart);
+
+  const secondBarChartMetadataGroup = document.querySelectorAll('#chartArea .bar-chart .metadata-group')[1];
+  select(secondBarChartMetadataGroup).datum([]).call(tooltip);
 };
