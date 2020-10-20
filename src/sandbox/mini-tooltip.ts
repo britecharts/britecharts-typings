@@ -1,8 +1,10 @@
 import { bar, miniTooltip, colors, BarChartModule } from 'britecharts';
 
-export const constructMiniTooltipBarChart = (containerNode: Element): BarChartModule => {
+export const constructChart = (containerNode: Element): {barChart: BarChartModule, tooltip:any} => {
   const barChart = bar();
   const tooltip = miniTooltip();
+
+  tooltip.title('Test Title');
 
   barChart
     .margin({
@@ -19,5 +21,5 @@ export const constructMiniTooltipBarChart = (containerNode: Element): BarChartMo
     .on('customMouseMove', tooltip.update)
     .on('customMouseOut', tooltip.hide);
 
-  return barChart;
+  return {barChart, tooltip};
 };
