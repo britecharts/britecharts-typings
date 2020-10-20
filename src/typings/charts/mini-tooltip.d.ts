@@ -18,12 +18,12 @@ export type TooltipSelection = Selection<
   any
 >;
 
-type MousePosition = [
+export type MousePosition = [
   x: number,
   y: number
 ]
 
-type ChartSize = [
+export type ChartSize = [
   width: number,
   height: number
 ];
@@ -31,6 +31,7 @@ type ChartSize = [
 type FormattingFunction = (value: number) => number;
 
 export interface MiniTooltipAPI {
+  /** Hides the tooltip */
   hide(): void;
   /** Shows the tooltip */
   show(): void;
