@@ -18,15 +18,9 @@ export type TooltipSelection = Selection<
   any
 >;
 
-export type MousePosition = [
-  x: number,
-  y: number
-]
+export type MousePosition = [ number, number ];
 
-export type ChartSize = [
-  width: number,
-  height: number
-];
+export type ChartSize = [ number, number ];
 
 type FormattingFunction = (value: number) => number;
 
