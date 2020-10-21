@@ -1,6 +1,6 @@
-import { line, tooltip, LineChartModule } from 'britecharts';
+import { line, tooltip, LineChartModule, TooltipModule } from 'britecharts';
 
-export const constructChart = (containerNode: Element): {lineChartWithTooltip: LineChartModule, tooltipComponent:any} => {
+export const constructChart = (containerNode: Element): {lineChartWithTooltip: LineChartModule, tooltipComponent:TooltipModule} => {
   const lineChartWithTooltip = line();
   const tooltipComponent = tooltip();
 
