@@ -26,6 +26,7 @@ import { constructChart as constructGroupedBarChart } from './grouped-bar';
 import { constructChart as constructStackedBarChart } from './stacked-bar';
 import { constructChart as constructHeatmapChart } from './heatmap';
 import { constructChart as constructBarWithMinitooltip } from './mini-tooltip';
+import { constructChart as constructLineChartWithTooltip } from './tooltip';
 
 import { buildTemplate } from './template';
 
@@ -92,4 +93,12 @@ export default (window: Window) => {
 
   const secondBarChartMetadataGroup = document.querySelectorAll('#chartArea .bar-chart .metadata-group')[1];
   select(secondBarChartMetadataGroup).datum([]).call(tooltip);
+
+  const {lineChartWithTooltip, tooltipComponent} = constructLineChartWithTooltip(containerNode);
+  container
+    .datum(SAMPLE_LINE_CHART_DATA)
+    .call(lineChartWithTooltip);
+
+  const secondLineChartMetadataGroup = document.querySelectorAll('#chartArea .line-chart .metadata-group')[1];
+  select(secondLineChartMetadataGroup).datum([]).call(tooltipComponent);
 };
