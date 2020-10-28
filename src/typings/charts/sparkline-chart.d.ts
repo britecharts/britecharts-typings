@@ -31,10 +31,22 @@ export interface SparklineChartAPI extends
     ChartDimensionsAPI<SparklineChartModule>,
     ChartAnimationAPI<SparklineChartModule>,
     ExportableChartAPI<SparklineChartModule>  {
+  /** Gets or Sets the areaGradient of the chart */
   areaGradient(gradient?: [string, string]): SparklineChartModule;
+  /** Gets or Sets the lineGradient of the chart */
   lineGradient(gradient?: [string, string]): SparklineChartModule;
+  /** Gets or Sets the loading state of the chart */
   loadingState(markup?: string): SparklineChartModule;
+  /**
+   * Gets or Sets the text of the title at the top of sparkline.
+   * To style the title, use the titleTextStyle method below.
+   */
   titleText(title?: string): SparklineChartModule;
+  /**
+   * Gets or Sets the text style object of the title at the top of sparkline.
+   * Using this method, you can set font-family, font-size, font-weight, font-style,
+   * and color (fill).
+   */
   titleTextStyle(titleStyle?: SparkelineTitleTextStyle): SparklineChartModule;
 }
 
